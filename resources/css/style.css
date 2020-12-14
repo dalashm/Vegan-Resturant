@@ -1,0 +1,529 @@
+/*===================================================================== */
+/* Basic Setup */
+/*===================================================================== */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #ffffff;
+	color: #555555;
+	font-family: 'Lato', 'Arial', 'sans-serif';
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+}
+.clearfix {
+	zoom: 1;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+/*======================================================================== */
+/* Reusable Components */
+/*======================================================================== */
+.row {
+	/* max-width: 88%; */
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 80px 0;
+}
+.box {
+	padding: 1%;
+}
+/*============================ Headings ===================================*/
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+h1 {
+	font-size: 300%;
+	color: #ffffff;
+	word-spacing: 6px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+h1 span {
+	color: #dcfa76;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+}
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+h2::after {
+	display: block;
+	height: 3px;
+	width: 150px;
+	background-color: #c2df64;
+	content: "";
+	margin: 0 auto;
+	margin-top: 30px;
+}
+h3 {
+	font-size: 110%;
+	margin-bottom: 15px;
+}
+/*========================== Paragraph ==================================*/
+.long-copy {
+	line-height: 145%;
+	width: 70%;
+	margin-left: 15%;
+}
+.box p {
+	line-height: 145%;
+	font-size: 90%;
+}
+/*========================== Section Features ==================================*/
+.section-features .long-copy {
+	margin-bottom: 30px;
+}
+/*===========================Icons ======================================*/
+.icon-big {
+	font-size: 350%;
+	display: block;
+	color: #c2df64;
+	margin-bottom: 15px;
+}
+
+.icon-small {
+	color: #c4e654;
+	padding-right: 15px;
+	font-size: 120%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/*========================= Buttons ======================================*/
+.btn:link,
+.btn:visited,
+input[type=submit] {
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: 300;
+	text-decoration: none;
+	border-radius: 200px;
+	transition: background 0.3s, border 0.2s, color 0.2s;
+}
+
+/*   Btn in Header */
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+	background-color: #b5d841;
+}
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+	background-color: #b5d15a;
+	border: 1px solid#c2df64;
+	color: #ffffff;
+	margin-right: 15px;
+	font-weight: 300;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	border: 1px solid#c2df64;
+	color: #c2df64;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit] {
+	border: 1px solid #b5d841;
+	background-color: #b5d841;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	color: #ffffff;
+	border: 1px solid #b5d841;
+}
+
+/*======================================================================== */
+/* Header  */
+/*======================================================================= */
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url(img/yoav-aziz-AiHJiRCwB3w-unsplash.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.hero-text-box {
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-top: 28px;
+	color: #dcfa76;
+	font-size: 220%;
+	letter-spacing: 0.2em;
+	font-weight: 400;
+}
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 45px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 40px;
+	text-decoration: none;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding: 8px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	color: #ffffff;
+	border-bottom: 2px solid transparent;
+	transition: 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+	color: #ffffff;
+	border-bottom: 2px solid#c2df64;
+}
+
+/*===================================================================== */
+/* Meals Section*/
+/*===================================================================== */
+.section-meals {
+	padding: 0;
+}
+.meals-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.meals-showcase li {
+	display: block;
+	float: left;
+	width: 25%;
+}
+.meal-photo {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: black;
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+}
+.meal-photo img {
+	width: 100%;
+	height: 310px;
+	transform: scale(1.1);
+	transition: transform 0.3s, opacity 0.3s;
+}
+.meal-photo:hover {
+	opacity: 0.8;
+}
+
+/*======================================================================== */
+/* how it works */
+/*======================================================================== */
+.section-steps {
+	background-color: #ffffff;
+}
+.steps-box:first-child {
+	text-align: right;
+	padding-right: 3%;
+	margin-top: 30px;
+}
+.steps-box:last-child {
+	text-align: left;
+	padding-left: 3%;
+	margin-top: 70px;
+}
+.app-screen {
+	width: 40%;
+	height: auto;
+}
+.works-step {
+	margin-bottom: 50px;
+}
+.works-step:nth-of-type(3) {
+	margin-bottom: 80px;
+}
+.works-step div {
+	/* display: inline-block; */
+	color: #c2df64;
+	border: 2px solid#c2df64;
+	border-radius: 50%;
+	height: 55px;
+	width: 55px;
+	padding: 7px 5px 5px 5px;
+	text-align: center;
+	float: left;
+	font-size: 150%;
+	margin-right: 25px;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.works-step div:hover {
+	background-color: #c2df64;
+	color: #ffffff;
+}
+
+.btn-app img {
+	height: 50px;
+	width: auto;
+	padding-right: 10px;
+}
+
+/*======================================================================== */
+/* section cities */
+/*======================================================================== */
+.box img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+.cities-features {
+	margin-bottom: 5px;
+}
+
+.cities-features a:link,
+.cities-features a:visited {
+	color: #c2df64;
+	text-decoration: none;
+	border-bottom: 1px solid#c2df64;
+	padding-bottom: 3px;
+	transition: color 0.3s, border-bottom 0.3s;
+}
+
+.cities-features a:active,
+.cities-features a:hover {
+	color: inherit;
+	border-bottom: 1px solid transparent;
+}
+
+/*======================================================================== */
+/* section customers */
+/*======================================================================== */
+.section-testimonials {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+		url(img/dan-gold-4_jhDO54BYg-unsplash.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ffffff;
+}
+
+blockquote {
+	padding: 3%;
+	font-style: italic;
+	line-height: 145%;
+	position: relative;
+	margin-top: 40px;
+	word-spacing: 0.1em;
+}
+blockquote::before {
+	content: "\201c";
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+
+cite {
+	font-size: 90%;
+	margin-top: 25px;
+	display: block;
+}
+
+cite img {
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/*======================================================================== */
+/* section plans*/
+/*======================================================================== */
+.section-plans {
+	background-color: #f4f4f4;
+}
+.plan-box {
+	background-color: #ffffff;
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 5px;
+	box-shadow: 1px 3px 3px #efefef;
+}
+
+.plan-box div {
+	padding: 15px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.plan-box div:first-child {
+	background-color: #fcfcfc;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.plan-box div:last-child {
+	text-align: center;
+	padding: 30px 0;
+	border: 0;
+}
+.plan-price {
+	font-size: 300%;
+	font-weight: 200;
+	margin-bottom: 10px;
+	color: #a7d806;
+}
+.plan-price span {
+	font-size: 30%;
+	font-weight: 300;
+}
+.plan-price-meal {
+	font-size: 80%;
+}
+
+.plan-box ul {
+	list-style: none;
+}
+.plan-box ul li {
+	padding: 5px 0;
+}
+
+/*======================================================================== */
+/* section form*/
+/*======================================================================== */
+.contact-form {
+	width: 60%;
+	margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+	width: 100%;
+	padding: 7px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	height: 100px;
+}
+input[type=checkbox] {
+	margin: 10px 5px 10px 0px;
+}
+*:focus {
+	outline: none;
+}
+
+::placeholder {
+	font-weight: 300;
+}
+
+/*======================================================================== */
+/* section Footer*/
+/*======================================================================== */
+footer {
+	background-color: #333;
+	padding: 50px;
+	font-size: 80%;
+}
+.footer-nav {
+	float: left;
+	list-style: none;
+}
+.social-links {
+	float: right;
+	list-style: none;
+}
+.footer-nav li,
+.social-links li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+	margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+	text-decoration: none;
+	border: 0;
+	color: #888;
+	transition: color 0.3s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+	font-size: 150%;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+	color: #ddd;
+}
+
+.logo-facebook,
+.logo-twitter,
+.logo-google,
+.logo-instagram {
+	transition: color 0.3s;
+}
+
+.logo-facebook:hover {
+	color: #3b5998;
+}
+.logo-twitter:hover {
+	color: #55acee;
+}
+.logo-google:hover {
+	color: #dd4b39;
+}
+.logo-instagram:hover {
+	color: #bc2a8d;
+}
+footer p {
+	color: #888;
+	text-align: center;
+	font-size: 90%;
+	margin-top: 20px;
+}
